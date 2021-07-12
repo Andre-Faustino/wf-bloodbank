@@ -1,0 +1,63 @@
+
+<div class="donator-state-chart">
+    <h1>Donators by State</h1>
+    <canvas baseChart 
+        [datasets]="charts.donatorsByState.barChartData" 
+        [labels]="charts.donatorsByState.barChartLabels" 
+        [options]="charts.donatorsByState.barChartOptions"
+        [plugins]="charts.donatorsByState.barChartPlugins" 
+        [legend]="charts.donatorsByState.barChartLegend" 
+        [colors]="charts.donatorsByState.barChartColors" 
+        [chartType]="charts.donatorsByState.barChartType">
+    </canvas>
+</div>
+
+<div class="pie-chart">
+    <h1>Overweight percentage by Gender</h1>
+    <canvas baseChart 
+    [data]="charts.overweightGenderPieService.pieChartData" 
+    [labels]="charts.overweightGenderPieService.pieChartLabels" 
+    [chartType]="charts.overweightGenderPieService.pieChartType"
+    [options]="charts.overweightGenderPieService.pieChartOptions"
+    [plugins]="charts.overweightGenderPieService.pieChartPlugins"
+    [colors]="charts.overweightGenderPieService.pieChartColors" 
+    [legend]="charts.overweightGenderPieService.pieChartLegend">
+  </canvas>
+</div>
+
+<div class="avg-imc-chart">
+    <h1>Average IMC by Age</h1>
+    <canvas baseChart 
+        [datasets]="charts.avgImcByAge.lineChartData" 
+        [labels]="charts.avgImcByAge.lineChartLabels" 
+        [options]="charts.avgImcByAge.lineChartOptions"
+        [colors]="charts.avgImcByAge.lineChartColors" 
+        [legend]="charts.avgImcByAge.lineChartLegend" 
+        [chartType]="charts.avgImcByAge.lineChartType" 
+        [plugins]="charts.avgImcByAge.lineChartPlugins">
+    </canvas>
+</div>
+<div class="avg-age-blood-chart">
+    <h1>Age by Bloodtype</h1>
+    <canvas baseChart 
+        [datasets]="charts.avgAgeByBlood.barChartData" 
+        [labels]="charts.avgAgeByBlood.barChartLabels" 
+        [options]="charts.avgAgeByBlood.barChartOptions"
+        [plugins]="charts.avgAgeByBlood.barChartPlugins" 
+        [legend]="charts.avgAgeByBlood.barChartLegend" 
+        [colors]="charts.avgAgeByBlood.barChartColors" 
+        [chartType]="charts.avgAgeByBlood.barChartType">
+    </canvas>
+</div>
+<div class="avg-age-blood-chart">
+    <h1>Donators to Bloodtype</h1>
+    <canvas baseChart 
+        [datasets]="charts.quantityReceptor.barChartData" 
+        [labels]="charts.quantityReceptor.barChartLabels" 
+        [options]="charts.quantityReceptor.barChartOptions"
+        [plugins]="charts.quantityReceptor.barChartPlugins" 
+        [legend]="charts.quantityReceptor.barChartLegend" 
+        [colors]="charts.quantityReceptor.barChartColors" 
+        [chartType]="charts.quantityReceptor.barChartType">
+    </canvas>
+</div>

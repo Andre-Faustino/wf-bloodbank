@@ -1,0 +1,274 @@
+swagger: '2.0'
+info:
+  description: |
+    API's documentation of Blood Bank Service.
+  version: 1.0.0
+  title: Blood Bank Swagger
+  contact:
+    email: andre.domingues.faustino@gmail.com
+paths:
+  /donator:
+    post:
+      tags:
+      - donator
+      summary: Insert Donator
+      operationId: addDonator
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: JSON object with donator's data
+        required: true
+        schema:
+          $ref: '#/definitions/DonatorDTO'
+      responses:
+        405:
+          description: Invalid input
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/ResponseMessage'
+  /donator/batch:
+    post:
+      tags:
+      - donator
+      summary: Insert Donators
+      operationId: addDonatorList
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: JSON object with donator's data
+        required: true
+        schema:
+          $ref: '#/definitions/DonatorDTOlist'
+      responses:
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/ResponseMessage'
+        405:
+          description: Invalid input        
+  /donator/states:
+    get:
+      tags: 
+      - donator
+      summary: Donators By State
+      operationId: DonatorsByState
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        type: string
+        name: name
+        description: Find Specific State
+        required: false
+        
+      responses:
+        200:
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/DonatorsByState'
+  /donator/imc:
+    get:
+      tags: 
+      - donator
+      summary: Average IMC by Age Range
+      operationId: AvgIMCByAgeRange
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        type: string
+        name: rangeAge
+        description: Specifies Range Age
+        required: false
+        default: 10
+      responses:
+        200:
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AvgIMCByAge'
+  /donator/imc/overweight:
+    get:
+      tags: 
+      - donator
+      summary: Overweight Between Genders
+      operationId: avgOverweightByGenders
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        200:
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/GenderOverweight'
+  /donator/age:
+    get:
+      tags: 
+      - donator
+      summary: Average Age by BloodType
+      operationId: AvgAgeByBlood
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        type: string
+        name: blood
+        description: Specifies Blood Type
+        required: false
+        
+      responses:
+        200:
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AvgAgeByBlood'
+  /donator/receptorblood:
+    get:
+      tags: 
+      - donator
+      summary: Quantity of Donators for each blood receptor
+      operationId: DonatorsAmountByReceptorBlood
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        type: string
+        name: blood
+        description: Specifies Blood Type
+        required: false
+        
+      responses:
+        200:
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/DonatorByReceptorBlood'
+      
+definitions:
+  DonatorDTOlist:
+    type: array
+    items:
+       $ref: '#/definitions/DonatorDTO'
+  DonatorDTO:
+    type: object
+    required:
+    - nome
+    - tipo_sanguineo
+    properties:
+      nome:
+        type: string
+      cpf:
+        type: string
+      rg:
+        type: string
+      data_nasc:
+        type: string
+      sexo:
+        type: string
+        enum:
+        - Masculino
+        - Feminino
+      mae:
+        type: string
+      pai:
+        type: string
+      email:
+        type: string
+      cep:
+        type: string
+      endereco:
+        type: string
+      numero:
+       type: integer
+       format: int32
+      bairro:
+        type: string
+      cidade:
+        type: string
+      estado:
+        type: string
+      telefone_fixo:
+        type: string
+      celular:
+        type: string
+      altura:
+        type: number
+        multipleOf: 0.01
+      peso:
+        type: number
+        multipleOf: 0.01
+      tipo_sanguineo:
+        type: string
+  DonatorsByState:
+    type: object
+    properties:
+      state: 
+        type: string
+      amount: 
+        type: integer
+  AvgIMCByAge:
+    type: object
+    properties:
+      ageRange: 
+        type: string
+      imc: 
+        type: number
+        multipleOf: 0.01
+  GenderOverweight:
+    type: object
+    properties:
+      gender: 
+        type: string
+      percentual: 
+        type: number
+        multipleOf: 0.01
+  AvgAgeByBlood:
+    type: object
+    properties:
+      bloodType: 
+        type: string
+      age: 
+        type: number
+        multipleOf: 0.01
+  DonatorByReceptorBlood:
+    type: object
+    properties:
+      receptorBloodType: 
+        type: string
+      quantity: 
+        type: integer
+  ResponseMessage:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+schemes:
+ - https
+ - http

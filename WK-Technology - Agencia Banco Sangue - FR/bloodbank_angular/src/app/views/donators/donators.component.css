@@ -1,0 +1,6 @@
+mat-progress-spinner {
+    z-index: 5;
+}
+.progress-container{
+    padding-top: 20px;
+}

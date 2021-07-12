@@ -1,0 +1,9 @@
+<input hidden type="file" #fileInput (change)="onFileInput(fileInput.files)" />
+
+<button mat-mini-fab style="background-color: transparent;" (click)="fileInput.click()" [disabled]="!_bCanUpload">
+     <mat-icon style="color:aliceblue">attach_file</mat-icon>
+</button>
+{{ file ? 'File uploaded!' : 'Please, insert your json data' }}
+<div class="progress-container">
+     <mat-progress-spinner [diameter]="40" [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
+</div>
