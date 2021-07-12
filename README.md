@@ -53,8 +53,9 @@ altura^2)
 > Caso queira ver a documentação swagger, pode encontra-la em __resourses/blood_bank_api.yaml__ ou clicando nesta [documentação online](https://app.swaggerhub.com/apis-docs/andre_faustino/blood_bank_service/1.0.0)
 
 >### 3 Angular : 
->-  Clone o serviço FR e na pasta __/bloodbank__ utilize o comando :
->      - ``ng serve``
+>-  Clone o serviço FR e na pasta __/bloodbank__ utilize os comandos :
+>      - `npm install`
+>      - `ng serve`
 >- Atenção:
 >   - Certifque-se de ter o __npm__ e __angular__ instalados
 >   - Por padrão, a aplicação irá buscar o serviço Spring em __http://localhost:8080__. Caso esteja em outro endereço, por favor altere em __environment.ts__ a propriedade __baseUrl__ para o endereço correto
