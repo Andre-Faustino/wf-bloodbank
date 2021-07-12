@@ -1,0 +1,9 @@
+package com.wk.technology.blood.bank.service.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.wk.technology.blood.bank.service.models.donators.Donator;
+
+public interface DonatorRepository extends JpaRepository<Donator, Long>{
+
+}

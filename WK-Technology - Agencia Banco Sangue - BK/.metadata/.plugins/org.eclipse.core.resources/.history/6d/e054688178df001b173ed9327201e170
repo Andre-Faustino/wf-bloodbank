@@ -1,0 +1,30 @@
+package com.wk.technology.blood.bank.service.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.wk.technology.blood.bank.service.swagger.DonatorApi;
+
+@RestController
+@RequestMapping("/teste")
+public class Donator implements DonatorApi{
+
+	@Override
+	public ResponseEntity<Void> addDonator(com.wk.technology.blood.bank.service.swagger.models.@Valid DonatorDTO body) {
+		// TODO Auto-generated method stub
+		return ResponseEntity.noContent().build();
+	}
+
+	@Override
+	public ResponseEntity<Void> getDonator() {
+		// TODO Auto-generated method stub
+		return ResponseEntity.noContent().build();
+	}
+	
+	
+
+	
+}

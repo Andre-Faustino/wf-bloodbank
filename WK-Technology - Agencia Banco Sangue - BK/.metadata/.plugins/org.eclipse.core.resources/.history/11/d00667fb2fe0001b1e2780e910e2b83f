@@ -1,0 +1,27 @@
+package com.wk.technology.blood.bank.service.util;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+
+import com.wk.technology.blood.bank.service.models.donators.Donator;
+
+public class DonatorValidator {
+
+	public static Boolean validateDonator(Donator donator) {
+
+		Long age = getAge(donator.getDonatorBirthdate()); 
+		
+		if(age > 16 && )
+		
+		return false;
+	}
+	
+	public static Long getAge(String birthDate) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+		String date = birthDate;
+		LocalDate localDate = LocalDate.parse(date, formatter);
+		return ChronoUnit.YEARS.between(localDate, LocalDate.now());
+	}
+	
+}

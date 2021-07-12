@@ -1,0 +1,17 @@
+package com.wk.technology.blood.bank.service.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.wk.technology.blood.bank.service.models.donators.Donator;
+
+@Repository
+public interface DonatorRepository extends JpaRepository<Donator, Long>{
+	
+	@Query(value = "select count(v) as cnt, v.answer from Survey v group by v.answer")
+	public List<?> findSurveyCount();
+
+}

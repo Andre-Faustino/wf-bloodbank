@@ -1,0 +1,5 @@
+package com.wk.technology.blood.bank.service.config;
+
+public class WebSecurityConfig {
+
+}

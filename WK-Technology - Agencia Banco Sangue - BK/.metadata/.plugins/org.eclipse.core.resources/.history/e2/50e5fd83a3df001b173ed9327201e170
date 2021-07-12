@@ -1,0 +1,13 @@
+package com.wk.technology.blood.bank.service.dtos;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class DonatorsByStateDTO {
+
+	private String state;
+
+	private Integer amount;
+	
+	
+
+}

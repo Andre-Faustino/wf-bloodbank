@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
+<fullyQualifiedTypeName name="javax.persistence.EnumType"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="wk.technology.blood.bank.service.swagger.api.DonatorApi"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.swagger.DonatorApi"/>
+<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.swagger.models.DonatorsByState"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.models.locations.State"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.swagger.models.AvgIMCByAge"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.models.donators.Donator"/>
+<fullyQualifiedTypeName name="org.apache.el.stream.Optional"/>
+<fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.util.DonatorValidator"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.models.enums.GenderType"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.swagger.models.AvgAgeByBlood"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.utils.DonatorValidator"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.models.enums.BloodType"/>
+<fullyQualifiedTypeName name="com.wk.technology.blood.bank.service.repositories.CityRepository"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="java.math.RoundingMode"/>
+</qualifiedTypeNameHistroy>

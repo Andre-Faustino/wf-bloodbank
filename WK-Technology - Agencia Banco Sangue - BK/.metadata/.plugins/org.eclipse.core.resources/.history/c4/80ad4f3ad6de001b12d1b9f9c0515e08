@@ -1,0 +1,26 @@
+package com.wk.technology.blood.bank.service.models.donators;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.wk.technology.blood.bank.service.models.enums.BloodType;
+
+@Entity
+public class DonatorInfo implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long donatorBloodId;
+	
+	private String donatorHeight;
+	private String donatorWeight;
+	private BloodType bloodType;
+	
+
+}

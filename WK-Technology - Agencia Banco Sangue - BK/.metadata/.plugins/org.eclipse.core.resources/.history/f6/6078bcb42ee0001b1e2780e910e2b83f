@@ -1,0 +1,9 @@
+package com.wk.technology.blood.bank.service.util;
+
+public class TimeValidator {
+
+	public static Boolean validateDonator() {
+		
+	}
+	
+}

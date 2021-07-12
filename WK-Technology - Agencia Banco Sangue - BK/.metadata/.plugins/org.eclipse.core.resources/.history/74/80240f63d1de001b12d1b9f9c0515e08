@@ -1,0 +1,12 @@
+package com.wk.technology.blood.bank.service.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+
+@Entity
+public class DonatorContact implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+}

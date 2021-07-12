@@ -1,0 +1,5 @@
+package com.wk.technology.blood.bank.service.util;
+
+public class TimeValidator {
+
+}

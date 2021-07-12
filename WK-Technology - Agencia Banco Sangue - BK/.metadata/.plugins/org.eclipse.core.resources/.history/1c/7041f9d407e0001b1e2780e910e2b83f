@@ -1,0 +1,19 @@
+package com.wk.technology.blood.bank.service.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.wk.technology.blood.bank.service.dtos.DonatorsByStateDTO;
+import com.wk.technology.blood.bank.service.models.donators.Donator;
+import com.wk.technology.blood.bank.service.swagger.models.DonatorsByState;
+
+@Repository
+public interface DonatorRepository extends JpaRepository<Donator, Long>{
+	
+	@Query("SELECT new com.wk.technology.blood.bank.service.dtos.DonatorsByStateDTO(c.donatorAddress AS state, COUNT(c.donatorAddress.id) AS amount) "
+			  + "FROM Donator c GROUP BY c.donatorAddress.id")
+	List<DonatorsByStateDTO> countThem();
+}

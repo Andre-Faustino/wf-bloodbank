@@ -1,0 +1,13 @@
+package com.wk.technology.blood.bank.service.util;
+
+import com.wk.technology.blood.bank.service.models.donators.Donator;
+
+public class DonatorValidator {
+
+	public static Boolean validateDonator(Donator donator) {
+		
+		
+		return false;
+	}
+	
+}

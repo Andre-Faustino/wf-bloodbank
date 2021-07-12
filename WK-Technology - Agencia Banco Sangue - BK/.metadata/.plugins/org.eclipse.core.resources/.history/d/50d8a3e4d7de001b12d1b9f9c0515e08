@@ -1,0 +1,55 @@
+package com.wk.technology.blood.bank.service.models.donators;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
+
+import com.wk.technology.blood.bank.service.models.enums.GenderType;
+import com.wk.technology.blood.bank.service.models.locations.Address;
+
+@Entity
+public class Donator implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long donatorId;
+
+	private String donatorName;
+
+	@Column(unique = true)
+	private String donatorCpf;
+	private String donatorRg;
+	private String donatorBirthdate;
+	
+	private GenderType donatorGender;
+	private String donatorMother; 
+	private String donatorFather; 
+	
+	
+	@OneToOne
+	@JoinColumn(name = "donator_contact_id")
+	@MapsId
+	private DonatorContact donatorContact;
+	
+	@OneToOne
+	@JoinColumn(name = "donator_info_id")
+	@MapsId
+	private DonatorInfo donatorInfo;
+	
+	@ManyToOne
+	@JoinColumn(name = "delivery_address_id")
+	private Address donatorAddress;
+	
+	
+
+}

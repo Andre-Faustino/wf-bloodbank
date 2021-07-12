@@ -1,0 +1,7 @@
+package com.wk.technology.blood.bank.service.models;
+
+public class DonatorBlood {
+	
+	
+
+}

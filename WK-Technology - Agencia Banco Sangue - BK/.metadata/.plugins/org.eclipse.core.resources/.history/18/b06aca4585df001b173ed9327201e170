@@ -1,0 +1,18 @@
+package com.wk.technology.blood.bank.service.app;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@EntityScan("com.wk.technology.blood.bank.service.models")
+@ComponentScan(basePackages = { "com.person","om.wk.technology.blood.bank.service.models.controller"} )
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+		System.out.println("HELLO");
+	}
+
+}
